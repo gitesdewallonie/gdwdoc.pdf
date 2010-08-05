@@ -1,0 +1,13 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           i18n_domain="gdwdoc.pdf">
+
+  <browser:page
+     name="aws-content-pdfbook"
+     for="*"
+     class=".PdfDownload.PdfDownload"
+     attribute="handlePDF"
+     permission="zope2.View"
+     />
+
+</configure>

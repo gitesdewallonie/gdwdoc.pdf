@@ -11,7 +11,7 @@
         description="Change PDF file name (http://trac.affinitic.be/trac/ticket/2470)"
         class="aws.pdfbook.conversions.FileSystemInfo"
         original="__init__"
-        replacement=".pdf_generation.initFileSystemInfo"
+        replacement=".pdfgeneration.initFileSystemInfo"
         preservedoc="True"
         />
 
