@@ -1,7 +1,17 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:monkey="http://namespaces.plone.org/monkey"
     i18n_domain="gdwdoc.pdf">
 
+    <include package="collective.monkeypatcher" />
+
+    <monkey:patch
+        description="Change PDF file name (http://trac.affinitic.be/trac/ticket/2470)"
+        class="aws.pdfbook.conversions.FileSystemInfo"
+        original="__init__"
+        replacement=".pdf_generation.initFileSystemInfo"
+        preservedoc="True"
+        />
 
 </configure>
