@@ -5,6 +5,7 @@
     i18n_domain="gdwdoc.pdf">
 
     <include package="collective.monkeypatcher" />
+    <include file="profiles.zcml" />
 
     <monkey:patch
         description="Change PDF file name (http://trac.affinitic.be/trac/ticket/2470)"
