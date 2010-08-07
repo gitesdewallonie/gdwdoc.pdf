@@ -15,4 +15,12 @@
         preservedoc="True"
         />
 
+    <monkey:patch
+        description="Add ATBlob in images Meta types"
+        class="aws.pdfbook.conversions.RecodeParser"
+        original="save_images"
+        replacement=".pdfgeneration.saveImagesRecodeParser"
+        preservedoc="True"
+        />
+
 </configure>
