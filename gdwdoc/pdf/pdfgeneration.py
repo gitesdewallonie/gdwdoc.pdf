@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import shutil
 import tempfile
 from DateTime import DateTime
 from zope.app.component.interfaces import ISite
@@ -77,12 +78,14 @@ def saveImagesRecodeParser(self, context):
 
         # Eek, we should put an adapter for various image providers (overkill ?).
         data = ''
-        print 'OK'
         if item.meta_type in ('Portal Image', 'Image', 'ATBlob'):
             data = item.data
         elif item.meta_type == 'ATImage':
             data = item.getImage()
             data = getattr(item, 'data', data)
+        elif item.meta_type == 'Filesystem Image':
+            imagePath = item.filename
+            shutil.copy(imagePath, os.path.join(self.fsinfo.tmp_dir, filename))
 
         if data:
             image_file = open(os.path.join(self.fsinfo.tmp_dir, filename), 'wb')

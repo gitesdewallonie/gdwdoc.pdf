@@ -10,6 +10,6 @@
   <property name="htmldoc_path"
      type="string">/usr/bin/htmldoc</property>
   <property name="htmldoc_options"
-     type="text">--charset iso-8859-15 --headfootsize 8.0 --bodyfont helvetica --headfootfont Helvetica-Oblique --toctitle "Table du contenu" --size a4 --book -t pdf</property>
+     type="text">--charset iso-8859-15 --headfootsize 8.0 --bodyfont helvetica --headfootfont Helvetica-Oblique --toctitle "Table du contenu" --tocheader .t. --tocfooter ... --header .t. --footer lh/ --logoimage "http://doc.gitesdewallonie.be/logoGDW_web2.png" --size a4 --book -t pdf</property>
  </object>
 </object>
