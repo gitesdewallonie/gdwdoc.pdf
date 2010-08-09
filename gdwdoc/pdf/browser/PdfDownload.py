@@ -10,7 +10,7 @@ from aws.pdfbook.config import DOWNLOAD_BUFFER_SIZE
 
 def generateHtmlCredits():
     creditsHtml = u"""
-    <!-- NEED 8cm -->
+    <!-- NEED 15cm -->
     <h2>Crédits</h2>
     <center>
       <p>
